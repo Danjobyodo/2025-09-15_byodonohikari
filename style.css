@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* --- 全体のスタイル設定 --- */
+body {
+    margin: 0;
+    font-family: 'Noto Serif JP', serif; /* Google Fontsで読み込んだ明朝体フォントを指定 */
+    background-color: #1a1a1a; /* 背景がフェードアウトした後の背景色 */
+    color: #f0f0f0; /* 基本の文字色を白に近い色に */
+    line-height: 1.8;
+}
+
+/* --- ヒーローセクション（ファーストビュー）のスタイル --- */
+#hero {
+    /* 画面の高さいっぱいに表示 */
+    height: 100vh;
+    /* 背景画像の設定 */
+    background-image: url(byoudounohinode.JPG);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* スクロールしても背景を固定 */
+    background-attachment: fixed;
+
+    /* 中のテキストを上下左右中央に配置するための設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* テキストに影をつけて読みやすくする */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content h1 {
+    font-size: 8vw; /* ウィンドウ幅に応じて文字サイズが変わるように */
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5vw;
+    margin: 10px 0 0;
+}
+
+
+/* --- メインコンテンツのスタイル --- */
+main {
+    padding: 80px 20px;
+    max-width: 800px; /* 横幅が広がりすぎないように最大幅を指定 */
+    margin: 0 auto;   /* 中央寄せ */
+}
+
+.content-section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    /* 文字に少しだけアクセント */
+    border-bottom: 1px solid #c0a062;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* セクションタイトルを中央寄せするためのコンテナ */
+.content-section > h2 {
+    display: block;
+}
+
+
+/* --- 「信者の声」のスタイル --- */
+.testimonial {
+    background-color: #252525;
+    border-left: 5px solid #c0a062; /* 金色っぽいアクセントカラー */
+    padding: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+
+/* --- ボタンのスタイル --- */
+.cta-button {
+    display: block;
+    width: 250px;
+    margin: 40px auto 0;
+    padding: 15px;
+    background-color: #c0a062;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    transform: scale(1.05); /* 少し拡大する */
+}
+
+
+/* --- フッターのスタイル --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+
+/* --- スクロールアニメーションのためのスタイル --- */
+.fade-in {
+    opacity: 0; /* 初期状態では透明 */
+    transform: translateY(30px); /* 少し下にずらしておく */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1; /* 表示されたら不透明に */
+    transform: translateY(0); /* 元の位置に戻す */
+}
+
+/* --- スマートフォン向けのレスポンシブ設定 --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        /* vw単位を使いつつ、PC版より比率を大きくして視認性を確保 */
+        font-size: 13vw;
+    }
+
+    .hero-content p {
+        font-size: 4vw;
+    }
+
+    /* メインコンテンツの左右の余白を少し狭くする */
+    main {
+        padding: 60px 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
