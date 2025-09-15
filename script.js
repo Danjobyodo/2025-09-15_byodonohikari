@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // モバイルサイズの場合、背景を拡大してアニメーションに備える
                 const initialBgSize = 180;
                 hero.style.backgroundSize = `${initialBgSize}%`;
-                hero.style.backgroundPosition = 'center center';
+                hero.style.backgroundPosition = 'center top';
             } else {
                 // PCサイズの場合、CSSのデフォルト('cover')に戻す
                 hero.style.backgroundSize = '';
