@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // スクロールに応じてエフェクトを適用する関数
         const applyScrollEffects = () => {
-            const isMobileSize = window.innerWidth <= 768;
+            const isMobileSize = window.innerWidth <= 1536;
             const scrollPosition = window.scrollY;
             const windowHeight = window.innerHeight;
 
