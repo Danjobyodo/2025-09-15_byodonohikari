@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ウィンドウサイズに応じてヒーローセクションの初期状態を設定する関数
         const setupInitialState = () => {
-            const isMobileSize = window.innerWidth <= 768;
+            const isMobileSize = window.innerWidth <= 1536;
 
             if (isMobileSize) {
                 // モバイルサイズの場合、背景を拡大してアニメーションに備える
