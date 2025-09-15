@@ -116,7 +116,7 @@ footer {
 }
 
 /* --- スマートフォン向けのレスポンシブ設定 --- */
-@media (max-width: 768px) {
+@media (max-width: 1536px) {
     .hero-content h1 {
         font-size: 13vw;
     }
